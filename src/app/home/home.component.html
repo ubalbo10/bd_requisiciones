@@ -1,0 +1,58 @@
+
+<p-dropdown 
+[options]="cities" 
+[(ngModel)]="valorSelecionado"
+placeholder="Seleccione la Sucursal"
+optionLabel="name"
+[showClear]="true"></p-dropdown> <br><br><br>
+
+<p-dropdown 
+[options]="cities" 
+[(ngModel)]="valorSelecionado"
+placeholder="Seleccione personal que solicita la requesicion"
+optionLabel="name"
+[showClear]="true"></p-dropdown> <br><br><br>
+
+fecha limite: <p-calendar [(ngModel)]="fechaLimite"></p-calendar> <br><br><br><br>
+
+Agregue los productos : <br><br><br>
+
+<span class="p-float-label">
+  <input id="float-input" [(ngModel)]="idProducto" type="number" pInputText> 
+  <label for="float-input">id del producto</label>
+</span>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  
+<span class="p-float-label">
+  <input id="float-input" [(ngModel)]="nombreProducto" type="text" pInputText> 
+  <label for="float-input">Nombre del producto</label>
+</span>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+<span class="p-float-label">
+  <input id="float-input" [(ngModel)]="cantidad" type="number" pInputText> 
+  <label for="float-input">Cantidad</label>
+</span>
+&nbsp; &nbsp; <br>
+
+<p-button (click)="agregar()" label="Agregar" ></p-button>  <br> <br> <br>
+
+<p-table [columns]="cols" [value]="products" responsiveLayout="scroll">
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col.header}}
+          </th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+          <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+          </td>
+      </tr>
+  </ng-template>
+</p-table>
+
+
+
+
+
