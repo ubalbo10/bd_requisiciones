@@ -61,5 +61,17 @@ export class HomeComponent implements OnInit {
     this.cantidad=null;
 
   }
+  aceptar(){
 
+    //guardar en la api la requisicion , se debe crear requisicion con los datos nombre, fecha etc y la lista de podructs
+    alert('aceptado');
+  }
+  cancelar(){
+      alert('cancelado');
+      this.products=[];
+      this.fechaLimite=null;
+      this.valorSelecionado=null;
+  }
+
+  
 }
