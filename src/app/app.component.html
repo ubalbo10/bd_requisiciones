@@ -1,7 +1,15 @@
 
 <!--- aqui debe de ir el menu lateral dentro de esto van los componentes -->
 <h1>{{title}}</h1>
-<nav>
+
+<!-- <nav>
   <a routerLink="/heroes">Heroes</a>
-</nav>
+</nav> -->
+
+<h5>Seleccione una opcion</h5>
+<button #btn type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event) "></button>
+<p-slideMenu #menu [model]="items" [popup]="true" [viewportHeight]="250"  ></p-slideMenu>
+
 <router-outlet></router-outlet>
+
+

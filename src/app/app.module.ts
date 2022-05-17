@@ -10,6 +10,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from "primeng/dropdown"
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
+import { SlideMenuModule } from 'primeng/slidemenu';
 
 
 
@@ -19,13 +20,26 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 import { HomeComponent } from './home/home.component';
+import { PaisComponent } from './pais/pais.component';
+import { ProductoComponent } from './producto/producto.component';
+import { ProveedorComponent } from './proveedor/proveedor.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
+import { SucursalComponent } from './sucursal/sucursal.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PaisComponent,
+    ProductoComponent,
+    ProveedorComponent,
+    EmpleadoComponent,
+    SucursalComponent,
+    
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -36,7 +50,9 @@ import { HomeComponent } from './home/home.component';
     DropdownModule,
     BrowserAnimationsModule,
     ButtonModule,
-    TableModule,     
+    TableModule,  
+    SlideMenuModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
