@@ -25,6 +25,8 @@ import { ProductoComponent } from './producto/producto.component';
 import { ProveedorComponent } from './proveedor/proveedor.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { SucursalComponent } from './sucursal/sucursal.component';
+import { ListadoRequisicionesComponent } from './listado-requisiciones/listado-requisiciones.component';
+import { DetalleRequisicionesComponent } from './detalle-requisiciones/detalle-requisiciones.component';
 
 
 
@@ -37,6 +39,8 @@ import { SucursalComponent } from './sucursal/sucursal.component';
     ProveedorComponent,
     EmpleadoComponent,
     SucursalComponent,
+    ListadoRequisicionesComponent,
+    DetalleRequisicionesComponent,
     
     
     

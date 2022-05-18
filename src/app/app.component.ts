@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import {MenuItem} from 'primeng/api';
 @Component({
   selector: 'app-root',
@@ -12,13 +13,20 @@ import {MenuItem} from 'primeng/api';
 export class AppComponent {
   title = 'Ordenes_Requisiciones';
   value1='o';
-
+  
+   constructor(public router:Router){
+         
+   }
   items: MenuItem[]=[];
   ngOnInit() {
     this.items = [
         {
-           label:'File',
+           label:'Crear Requisicion',
            icon:'pi pi-fw pi-file',
+           command: (event: any) => {
+              
+                this.router.navigateByUrl("home");
+            }
            
         },
         {
