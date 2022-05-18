@@ -30,9 +30,13 @@ export class AppComponent {
            
         },
         {
-           label:'Edit',
+           label:'Consultar Requisiciones',
            icon:'pi pi-fw pi-pencil',
-           
+           command: (event: any) => {
+              
+            this.router.navigateByUrl("ConsultaRequisiciones");
+        }
+       
         },
         {
            label:'Users',
