@@ -1,1 +1,21 @@
-<p>detalle-requisiciones works!</p>
+<p-fieldset *ngIf="listaDetallesRequisicion$ | async as detalles" legend="Lista Detalles de Requisicion">
+    <p-table [value]="detalles" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID REQUISICION</th>
+                <th>PRODUCTO</th>
+                <th>CANTIDAD</th>
+                <th>ESTADO</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-drequisicion>
+            <tr >
+                <td>{{drequisicion.idrequisicion}}</td>
+                <td>{{detalleRequisicionProductoMap.get(drequisicion.id_producto)}}</td>
+                <!--<td>{{drequisicion.id_producto}}</td>-->
+                <td>{{drequisicion.cantidad}}</td>
+                <td>{{drequisicion.estado}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-fieldset >
