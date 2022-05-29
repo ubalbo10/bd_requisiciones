@@ -1,1 +1,24 @@
-<p>listado-requisiciones works!</p>
+<p-fieldset *ngIf="listaRequisiones$ | async as requisiciones"  legend="Lista de Requisiciones">
+    <p-table [value]="requisiciones" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>ID SUCURSAL</th>
+                <th>ESTADO</th>
+                <th>FECHA INGRESO</th>
+                <th>FECHA LIMITE</th>
+                <th>ENCARGADO</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-requisicion>
+            <tr >
+                <td><a routerLink="/detalleRequisicion" routerLinkActive="active">{{requisicion.idrequisicion}}</a></td>
+                <td>{{ requisicionSucursalMap.get(requisicion.id_sucursal)}}</td>
+                <td>{{requisicion.estado}}</td>
+                <td>{{requisicion.fechaingresada | date:'EE, dd-MMM-yy'}}</td>
+                <td>{{requisicion.fechalimite | date:'EE, dd-MMM-yy' }}</td>
+                <td>{{requisicion.usuarioencargado}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-fieldset >
