@@ -28,6 +28,11 @@ import { SucursalComponent } from './sucursal/sucursal.component';
 import { ListadoRequisicionesComponent } from './listado-requisiciones/listado-requisiciones.component';
 import { DetalleRequisicionesComponent } from './detalle-requisiciones/detalle-requisiciones.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { GenerarCompraComponent } from './generar-compra/generar-compra.component';
+
+
+
 
 
 @NgModule({
@@ -41,6 +46,7 @@ import { DetalleRequisicionesComponent } from './detalle-requisiciones/detalle-r
     SucursalComponent,
     ListadoRequisicionesComponent,
     DetalleRequisicionesComponent,
+    GenerarCompraComponent,
     
     
     
@@ -56,7 +62,7 @@ import { DetalleRequisicionesComponent } from './detalle-requisiciones/detalle-r
     ButtonModule,
     TableModule,  
     SlideMenuModule,
-   
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

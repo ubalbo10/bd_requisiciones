@@ -39,9 +39,15 @@ export class AppComponent {
        
         },
         {
-           label:'Users',
-           icon:'pi pi-fw pi-user',
-           
+         
+            label:'Generar Orden de compra',
+            icon:'pi pi-fw pi-file',
+            command: (event: any) => {
+               
+                 this.router.navigateByUrl("generarCompra");
+             }
+            
+         
         },
         {
            label:'Events',
