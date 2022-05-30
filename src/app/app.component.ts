@@ -50,9 +50,13 @@ export class AppComponent {
          
         },
         {
-           label:'Events',
+           label:'Consultar Orden compra',
            icon:'pi pi-fw pi-calendar',
-           
+           visible:true,
+           command: (event: any) => {
+               
+            this.router.navigateByUrl("ConsultaOrdenCompra");
+        }
         },
         {
            separator:true

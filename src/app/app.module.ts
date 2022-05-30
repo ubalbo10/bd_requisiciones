@@ -36,6 +36,7 @@ import localeEsSV from '@angular/common/locales/es-SV';
 
 import { HttpClientModule } from '@angular/common/http';
 import { GenerarCompraComponent } from './generar-compra/generar-compra.component';
+import { ListadoOrdenCompraComponent } from './listado-orden-compra/listado-orden-compra.component';
 
 
 
@@ -54,6 +55,7 @@ registerLocaleData(localeEsSV, 'es-SV');
     ListadoRequisicionesComponent,
     DetalleRequisicionesComponent,
     GenerarCompraComponent,
+    ListadoOrdenCompraComponent,
     
     
     

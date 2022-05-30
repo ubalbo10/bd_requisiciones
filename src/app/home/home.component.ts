@@ -53,19 +53,19 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obtenerSucursales();
-    this.obtenerEmpleado(); 
-    this.obtenerProductos();
+     this.obtenerSucursales();
+     this.obtenerEmpleado(); 
+     this.obtenerProductos();
     
 
-     this.products = [];
+    //  this.products = [];
 
-      this.cols = [
-          { field: 'id_producto', header: 'id_producto' },
-          { field: 'nombre', header: 'nombre' },
-          { field: 'cantidad', header: 'cantidad'}
-      ];
-    //console.log(this.cities);
+    //   this.cols = [
+    //       { field: 'id_producto', header: 'id_producto' },
+    //       { field: 'nombre', header: 'nombre' },
+    //       { field: 'cantidad', header: 'cantidad'}
+    //   ];
+    // //console.log(this.cities);
     
     
   }
@@ -152,6 +152,7 @@ export class HomeComponent implements OnInit {
     .subscribe((data:any)=>{
       console.log(data);
       
+      alert("requisicion ingresada")      
     })
     
   }

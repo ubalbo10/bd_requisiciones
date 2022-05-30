@@ -18,6 +18,7 @@ export class ListadoRequisicionesComponent implements OnInit {
   ngOnInit(): void {
     this.service.getgetListaRequisiciones();
     this.listaRequisiones$ = this.service.getListaRequisiciones();
+    
     this.actualizarRequisicionSucursalMap();
   }
 

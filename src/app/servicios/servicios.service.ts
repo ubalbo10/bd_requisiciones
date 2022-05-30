@@ -63,6 +63,29 @@ export class ServiciosService {
       })
     )   
   }
+  obtenerOrdenCompra(id?:String){
+    return this._http.post(environment.urlApi+'api/Orden_compra/Obtener',{id:id})
+    .pipe(
+      map((response)=>{
+        return response;
+      }),
+      catchError((err,c)=>{
+        throw err;
+      })
+    )   
+  }
+
+  obtenerDetalleOrdenCompra(id?:String){
+    return this._http.post(environment.urlApi+'api/Detalle_orden_compra/Obtener',{id:id})
+    .pipe(
+      map((response)=>{
+        return response;
+      }),
+      catchError((err,c)=>{
+        throw err;
+      })
+    )   
+  }
 
   ingresarCompra(body:RequisicionUdetalle){
     return this._http.post(environment.urlApi+

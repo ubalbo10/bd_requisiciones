@@ -1,0 +1,80 @@
+
+
+
+<p-table  [value]="listadoOrdenCompra" selectionMode="single" 
+(onRowSelect)="obtenerDetalleOrdenCompra()"
+[paginator]="true" [rows]="5"
+[(selection)]="ordenCmpraSelecionada">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th >
+               ID_Requisicion
+            </th>
+            <th >
+                Proveedor
+             </th>
+             <th >
+                No. Orden
+             </th>
+            
+             <th >
+               Fecha limite
+             </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td >
+               {{rowData.idrequisicion}}
+            </td>
+            <td >
+                {{rowData.nombre_proveedor}}
+             </td>
+             <td >
+                {{rowData.numero_orden}}
+             </td>
+             <td >
+                {{rowData.fechaLimite | date:'dd/MM/yyyy'}}
+             </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<p-table  [value]="listadoDetalleOrdenCompra" selectionMode="single" 
+[(selection)]="detalleOrdenCompraSelected">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th >
+               ID orden compra
+            </th>
+            <th >
+                Cantidad
+             </th>
+             <th >
+                Precio
+             </th>
+            
+             <th >
+               Valor
+             </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td >
+               {{rowData.id_orden_compra}}
+            </td>
+            <td >
+                {{rowData.cantidad}}
+             </td>
+             <td >
+                {{rowData.precio_unitario}}
+             </td>
+             <td >
+                {{rowData.valor_total}}
+             </td>
+        </tr>
+    </ng-template>
+</p-table>
+

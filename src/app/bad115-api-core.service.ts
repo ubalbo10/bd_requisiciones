@@ -37,8 +37,8 @@ export class Bad115ApiCoreService {
 */
    //DETALLE REQUISICION
   
- getListaDetallesRequisicion():Observable<any>{
-    return this.http.post<any>(this.bad115ApiCoreUrl + "/Detallerequisicion/Obtener", "", this.httpOptions);
+ getListaDetallesRequisicion(id?:String):Observable<any>{
+    return this.http.post<any>(this.bad115ApiCoreUrl + "/Detallerequisicion/Obtener",{id:id}, this.httpOptions);
   }
 
   //PRODUCTOS

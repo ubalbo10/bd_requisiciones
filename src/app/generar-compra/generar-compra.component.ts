@@ -80,6 +80,7 @@ export class GenerarCompraComponent implements OnInit {
     (data:any)=>{
       this.listadoProductos=data;
       console.log(data)
+      alert("compra generada")
     }
   )
 
