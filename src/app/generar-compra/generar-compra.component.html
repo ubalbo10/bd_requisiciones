@@ -1,0 +1,39 @@
+
+<p-dropdown 
+[options]="listadoProveedores" 
+[(ngModel)]="valorSelecionadoProveedor"
+placeholder="Seleccione el proveedor"
+optionLabel="id_proveedor"
+[showClear]="true"></p-dropdown> <br><br><br>
+
+<span class="p-float-label">
+    <input id="float-input" [(ngModel)]="idRequisicion" type="text" pInputText> 
+    <label for="float-input">Numero de requisicion:</label>
+  </span> <br> <br> <br>
+  
+  <button pButton (click)="generar()" type="button" label="generar Orden de compra" ></button> <br><br>
+
+
+
+<p-table [columns]="cols" [value]="listadoProductos" responsiveLayout="scroll">
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col.header}}
+          </th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+          <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+          </td>
+      </tr>
+  </ng-template>
+</p-table> <br> <br> <br>
+<button pButton (click)="aceptar()" type="button" label="Guardar" ></button> <br><br>
+<button pButton (click)="cancelar()" type="button" label="cancelar" class="p-button-secondary"></button>
+
+
+
+

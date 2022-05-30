@@ -35,7 +35,16 @@ import { DetalleRequisicionesComponent } from './detalle-requisiciones/detalle-r
 import { Bad115ApiCoreService } from './bad115-api-core.service';
 import localeEsSV from '@angular/common/locales/es-SV';
 
+<<<<<<< HEAD
 registerLocaleData(localeEsSV, 'es-SV');
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { GenerarCompraComponent } from './generar-compra/generar-compra.component';
+
+
+
+
+>>>>>>> main
 
 @NgModule({
   declarations: [
@@ -48,6 +57,7 @@ registerLocaleData(localeEsSV, 'es-SV');
     SucursalComponent,
     ListadoRequisicionesComponent,
     DetalleRequisicionesComponent,
+    GenerarCompraComponent,
     
     
     
@@ -64,10 +74,13 @@ registerLocaleData(localeEsSV, 'es-SV');
     TableModule,  
     SlideMenuModule,
     HttpClientModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     FieldsetModule,
     PanelMenuModule
 
+=======
+>>>>>>> main
   ],
   providers: [Bad115ApiCoreService, { provide: LOCALE_ID, useValue: 'es-SV' } ],
   bootstrap: [AppComponent]

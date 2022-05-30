@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Bad115ApiCoreService } from 'src/app/bad115-api-core.service';
+import { ProductoModel } from 'src/modelos/producto';
+import { ServiciosService } from '../servicios/servicios.service';
+
 @Component({
   selector: 'app-detalle-requisiciones',
   templateUrl: './detalle-requisiciones.component.html',
@@ -27,5 +30,6 @@ export class DetalleRequisicionesComponent implements OnInit {
         this.detalleRequisicionProductoMap.set(this.listaProductos[i].id_producto, this.listaProductos[i].nombre);
       }
     });
-  }
+  }  
 }
+
